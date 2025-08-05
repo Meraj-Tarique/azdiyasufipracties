@@ -9,13 +9,11 @@ const NotFoundPage = () => {
   );
 };
 
-// General metadata for the page
 export const metadata = {
   title: "404 - Page Not Found",
   description: "The page you are looking for does not exist.",
 };
 
-// Move the viewport export outside of the metadata export
 export const viewport = {
   width: "device-width",
   initialScale: 1,
