@@ -60,3 +60,10 @@
     /* background-color: #D1AD3C !important;  */
   }
   
+
+
+  @media (max-width: 320px) {
+  .cardContainer {
+    min-width: 140px;
+  }
+}

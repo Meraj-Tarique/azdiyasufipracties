@@ -1,8 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-// "use client";
-import styles from "@/styles/missionStyle.module.css";
-import { sections } from "./Content/content";
-
 // export const metadata = {
 //   title: "SEERAH",
 //   description: "This is about SEERAH.",
@@ -63,7 +58,6 @@ const BlogDetailPage = () => {
                 In the Name of ALLAH, the Beneficent, the Merciful
               </h1>
             </div>
-         
           </div>
         </div>
       </div>
