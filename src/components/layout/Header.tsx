@@ -58,20 +58,6 @@ export function Header() {
             )}
           >
             <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
-              {/* {["Home", "About", "Services", "Events", "Contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                      className={`${
-                        isScrolled ? "text-zinc-950" : "text-white"
-                      } hover:text-[#C5A059] transition-colors`}
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )} */}
               <li>
                 <Link
                   href="/"
