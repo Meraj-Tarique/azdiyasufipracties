@@ -2284,6 +2284,7 @@ export const sections = [
     id: "signs-of-departure-to-allah-the-sublime",
     title: "50. SIGNS OF DEPARTURE TO ALLAH THE SUBLIME.",
     content: (
+      // "white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       <p>
         a). Companion Mu'adh ibn Jabal narrates: \"When the Beloved Messenger of
         Allah صلى الله عليه وسلم dispatched him to Yemen, The Beloved Messenger
@@ -2331,7 +2332,7 @@ export const sections = [
     id: "the-last-few-days",
     title: "51. THE LAST FEW DAYS",
     content: (
-      <p>
+      <p style={{textAlign: 'justify'}}>
         a). On 4th day before Departure to Exalted Assembly of Prophets and
         Angels, The Maghrib salah was the last, Prophet صلى الله عليه وسلم led
         despite the strain of disease and suffering from pain. There after
@@ -2364,7 +2365,7 @@ export const sections = [
     id: "the-last-day",
     title: "52. THE LAST DAY",
     content: (
-      <p>
+      <p className="whitespace-pre-wrap overflow-hidden" style={{textAlign: 'justify'}}>
         While fajar (before dawn) congregational prayer was being performed in
         the Holy Mosque, Prophet صلى الله عليه وسلم raised the curtain of
         Ayesha's room, looked at His companions and smile cheerfully. Companions
@@ -2384,7 +2385,7 @@ export const sections = [
         صلى الله عليه وسلم whispered something which made Her smile. Ayesha رضی
         اللہُ عنہاfew days after the heavenly departure of Prophet صلى الله عليه
         وسلم, inquired from Fatima عنہا ہللا رضی about the whispers, Fatima رضی
-        اللہُ عنہاsaid that first time Prophet صلى الله عليه وسلم disclosed that
+        اللہُ عنہا said that first time Prophet صلى الله عليه وسلم disclosed that
         He was not going to recover from disease so i cried. Then He told me
         that, I would be the first from His blessed family to join Him so I
         smiled. Fatima عنہا ہللا رضی passed away after 6 months of departure of
