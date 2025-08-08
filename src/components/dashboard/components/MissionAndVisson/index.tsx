@@ -10,10 +10,10 @@ const MissionAndVissionPage = () => {
           Vision
         </h2>
         <div className="mx-auto px-4 py-2 max-w-3xl">
-          <p className="text-lg text-[#5c4d3d] leading-relaxed">
+          <p className="text-lg text-[#5c4d3d] leading-relaxed text-align-center">
             Enable ourselves to attain the state of{" "}
             <span className="italic">Ehsān</span> as desired in{" "}
-            <span className="font-semibold">Hadith Jibrael</span> (
+            <span className="font-semibold">Hadith Jibrael</span>
             <span className="italic">
               (Sahih Muslim, Book of Faith, Hadith No.1).
             </span>
@@ -25,7 +25,7 @@ const MissionAndVissionPage = () => {
           Mission
         </h2>
         <div className="mx-auto px-4 py-2 max-w-3xl">
-          <p className="text-lg text-[#5c4d3d] leading-relaxed">
+          <p className="text-lg text-[#5c4d3d] leading-relaxed text-align-center">
             Promulgate<span className="italic">Mujadidi Sufi Path</span> through
             a dedicated educational curriculum of{" "}
             <span className="font-semibold"> Salat wa salam, Dhikr </span>and{" "}

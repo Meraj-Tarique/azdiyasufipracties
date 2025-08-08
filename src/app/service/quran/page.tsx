@@ -659,10 +659,10 @@ const BlogDetailPage = () => {
             </div>
 
             {/* Footer */}
-            <div className="text-center mt-12 border-t pt-4">
-              <p>Muhammad Junaid Khan</p>
-              <p>Email: Junaid.khan1962@gmail.com</p>
-              <p>Cell Phone No. 00923003518567</p>
+            <div className="text-center mt-12 border-t pt-4 ">
+              <p className="text-align-center">Muhammad Junaid Khan</p>
+              <p className="text-align-center">Email: Junaid.khan1962@gmail.com</p>
+              <p className="text-align-center">Cell Phone No. 00923003518567</p>
             </div>
           </div>
         </div>

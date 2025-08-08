@@ -93,6 +93,22 @@ body {
   scroll-behavior: smooth;
 }
 
+p {
+  text-align: justify;
+}
+p {
+  font-family: Arial;
+}
+
+
+.text-align-center {
+   text-align: center;
+}
+
+li {
+  text-align: justify;
+}
+
 @keyframes loader {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
