@@ -19,6 +19,7 @@ const DownloadButton = ({ url }: DownloadButton) => {
               download="The-Radiant-Seerah.pdf"
               className="inline-flex items-center px-3 py-1.5 bg-gray-50/90 hover:bg-gray-100 border border-gray-200 text-gray-700 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
             >
+                
               <svg
                 className="w-4 h-4 mr-1.5"
                 fill="none"

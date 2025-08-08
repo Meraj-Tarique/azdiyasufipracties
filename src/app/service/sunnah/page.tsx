@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import DownloadButton from "@/components/DownloadButton";
 import styles from "@/styles/missionStyle.module.css";
 
 export const metadata = {
@@ -22,7 +23,18 @@ const BlogDetailPage = () => {
               In the Name of ALLAH, the Beneficent, the Merciful
             </h1>
           </div>
-          <div className={`text-center mb-12 ${styles.textStyle}`}>
+          <div className={`text-center mb-12 ${styles.textStyle} relative`}>
+            <h1
+              className=" font-bold md:mb-2
+                 sm:text-1xl 
+               md:text-2xl 
+               lg:text-3xl 
+               xl:text-4xl 
+               2xl:text-5xl
+                "
+            >
+              SUNNAH/HADITH
+            </h1>
             <h2
               className="font-bold md:mb-2
                  sm:text-1xl 
@@ -31,8 +43,9 @@ const BlogDetailPage = () => {
                xl:text-4xl 
                2xl:text-5xl"
             >
-              HADITH: BRIEF INTRODUCTION TO THE SCIENCE OF HADITH
+              BRIEF INTRODUCTION TO THE SCIENCE OF HADITH
             </h2>
+            <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Sunnah%20Hadith.pdf" />
           </div>
           <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
             {/* Cover Page */}
@@ -80,9 +93,9 @@ const BlogDetailPage = () => {
             <div className="mb-8">
               {/* Preface */}
               <div className="mb-8">
-                 <h3 className="text-2xl font-bold mb-4 text-primary">
-                    Preface:
-                  </h3>
+                <h3 className="text-2xl font-bold mb-4 text-primary">
+                  Preface:
+                </h3>
                 <p className="mb-4">
                   QURAN, the revelation from Almighty Allah, is the first
                   primary source of Sharī'ah to be Compiled. Hadith and Sunnah

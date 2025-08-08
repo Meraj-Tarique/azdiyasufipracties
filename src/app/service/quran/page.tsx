@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import DownloadButton from "@/components/DownloadButton";
 import styles from "@/styles/missionStyle.module.css";
 import { Amiri } from "next/font/google";
 
@@ -35,7 +36,8 @@ const BlogDetailPage = () => {
               In the Name of ALLAH, the Beneficent, the Merciful
             </h1>
           </div>
-          <div className={`text-center mb-12 ${styles.textStyle}`}>
+          <div className={`text-center mb-12 ${styles.textStyle} relative`}>
+            {/* QURAN COMPILATION AND COLLATION.pdf */}
             <h2
               className="font-bold md:mb-2
                  sm:text-1xl 
@@ -45,6 +47,7 @@ const BlogDetailPage = () => {
                2xl:text-5xl"
             >
               QUR'AN: COMPILATION AND COLLATION
+              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/2937bfbe97a97556cf7cbbfb2732f85712830bff/QURAN%20COMPILATION%20AND%20COLLATION.pdf" />
             </h2>
           </div>
           <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
@@ -661,7 +664,9 @@ const BlogDetailPage = () => {
             {/* Footer */}
             <div className="text-center mt-12 border-t pt-4 ">
               <p className="text-align-center">Muhammad Junaid Khan</p>
-              <p className="text-align-center">Email: Junaid.khan1962@gmail.com</p>
+              <p className="text-align-center">
+                Email: Junaid.khan1962@gmail.com
+              </p>
               <p className="text-align-center">Cell Phone No. 00923003518567</p>
             </div>
           </div>

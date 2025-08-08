@@ -2,6 +2,7 @@
 // "use client";
 import styles from "@/styles/missionStyle.module.css";
 import { sections } from "./Content/content";
+import DownloadButton from "@/components/DownloadButton";
 
 // export const metadata = {
 //   title: "SEERAH",
@@ -70,7 +71,7 @@ const BlogDetailPage = () => {
                 AHL AS-SUNNAH WA'L-JAMAA'AH
               </h2>
             </div> */}
-            <div className={`text-center mb-12 ${styles.textStyle}`}>
+            <div className={`text-center mb-12 ${styles.textStyle} relative`}>
               <h1
                 className=" font-bold md:mb-2
                  sm:text-1xl 
@@ -92,6 +93,8 @@ const BlogDetailPage = () => {
               >
                 AHL AS-SUNNAH WA'L-JAMAA'AH
               </h2>
+              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Beliefs%20and%20Creeds.pdf" />
+
             </div>
 
             <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
