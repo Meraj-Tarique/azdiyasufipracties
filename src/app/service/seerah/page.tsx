@@ -5,6 +5,7 @@ import { Amiri } from "next/font/google";
 // import ContentWithIndex from "./Indexing/ContentWithIndex";
 // import { useEffect, useRef, useState } from "react";
 import { sections } from "./Indexing/content";
+import DownloadButton from "@/components/DownloadButton";
 
 const amiri = Amiri({
   weight: "700",
@@ -72,29 +73,24 @@ const BlogDetailPage = () => {
                 In the Name of ALLAH, the Beneficent, the Merciful
               </h1>
             </div>
-            <div className={`text-center mb-12 ${styles.textStyle}`}>
-              <h1
-                className=" font-bold md:mb-2
-                 sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl
-                "
-              >
-                THE RADIANT SEERAH
-              </h1>
-              <h2
-                className="font-bold mb-2
-                   sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl"
-              >
-                Noble Prophet Muhammad{" "}
-                <span className={`${amiri.className} text-xl inline`}> ﷺ</span>
-              </h2>
+
+            <div className={`text-center mb-12 ${styles.textStyle} relative`}>
+              {/* Download Button - Absolute positioned */}
+
+              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/main/The%20Radiant%20Seerah.pdf" />
+              {/* Centered Headings */}
+              <div className="mx-auto">
+                <h1 className="font-bold md:mb-2 sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                  THE RADIANT SEERAH
+                </h1>
+                <h2 className="font-bold mb-2 sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                  Noble Prophet Muhammad{" "}
+                  <span className={`${amiri.className} text-xl inline`}>
+                    {" "}
+                    ﷺ
+                  </span>
+                </h2>
+              </div>
             </div>
             <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
               {/* Main Content */}
