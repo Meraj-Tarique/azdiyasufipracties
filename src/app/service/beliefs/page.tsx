@@ -3,6 +3,8 @@
 import styles from "@/styles/missionStyle.module.css";
 import { sections } from "./Content/content";
 import DownloadButton from "@/components/DownloadButton";
+import MainHeading from "@/components/Headings/MainHeading";
+import Link from "next/link";
 
 // export const metadata = {
 //   title: "SEERAH",
@@ -52,18 +54,8 @@ const BlogDetailPage = () => {
       <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
         <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-            <div className="bg-white-600 text-white p-6 items-center flex-col flex justify-center mb-8">
-              <h1
-                className="  text-center 
-              sm:text-3xl   
-               md:text-3xl 
-               lg:text-4xl 
-               xl:text-5xl 
-               2xl:text-6xl font-bold italic text-slate-800"
-              >
-                In the Name of ALLAH, the Beneficent, the Merciful
-              </h1>
-            </div>
+            <MainHeading />
+
             {/* <div className={`text-center mb-12   ${styles.textStyle}`}>
              
               <h1 className="text-4xl font-bold mb-4">BELIEFS AND CREEDS OF</h1>
@@ -73,28 +65,32 @@ const BlogDetailPage = () => {
             </div> */}
             <div className={`text-center mb-12 ${styles.textStyle} relative`}>
               <h1
-                className=" font-bold md:mb-2
-                 sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl
+                className=" font-bold  md:mb-2
+              sm:text-xl 
+              md:text-1xl 
+              lg:text-3xl 
+              xl:text-3xl
                 "
               >
-                BELIEFS AND CREEDS OF
+                𝙱𝙴𝙻𝙸𝙴𝙵𝚂 𝙰𝙽𝙳 𝙲𝚁𝙴𝙴𝙳𝚂 𝙾𝙵
               </h1>
               <h2
                 className="font-bold mb-2
-                   sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl"
+              sm:text-xl 
+              md:text-1xl 
+              lg:text-3xl 
+              xl:text-3xl"
               >
-                AHL AS-SUNNAH WA'L-JAMAA'AH
+                𝙰𝙷𝙻 𝙰𝚂-𝚂𝚄𝙽𝙽𝙰𝙷 𝚆𝙰'𝙻-𝙹𝙰𝙼𝙰𝙰'𝙰𝙷
               </h2>
               <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Beliefs%20and%20Creeds.pdf" />
-
+              <h2 className="text-xl md:text-2xl font-bold text-slate-700 mb-4">
+                <div>
+                  <Link href="/service/saints-biographies/Beliefs and Creeds of Ahl As-Sunnah Wa'-L-Jama'Ah" className="text-sm  border-[1px] border-black rounded-md p-1">
+                    Read In Urdu
+                  </Link>
+                </div>
+              </h2>
             </div>
 
             <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
@@ -122,7 +118,7 @@ const BlogDetailPage = () => {
                 ))}
 
                 {/* References and Contact */}
-                <div className=" mt-12 border-t pt-4">
+                <div className=" mt-12 border-t pt-4 ">
                   <h4 className="font-bold mb-2">References</h4>
                   <div className="references">
                     <div className="reference-item">
@@ -135,14 +131,15 @@ const BlogDetailPage = () => {
                       </span>
                     </div>
                   </div>
-
-                  <div className="text-center mt-6">
-                    <p>Compiled by: Muhammad Junaid Khan</p>
-                    <p>Email: junaid.khan1962@gmail.com</p>
-                    <p>Phone: (+92) 300 3518567</p>
-                    <p>Karachi, Pakistan</p>
-                    <p>(First Edition, 07-01-2025)</p>
-                  </div>
+                </div>
+                <div className="text-center mt-12 border-t pt-4 ">
+                  <p className="text-align-center">Muhammad Junaid Khan</p>
+                  <p className="text-align-center">
+                    Email: Junaid.khan1962@gmail.com
+                  </p>
+                  <p className="text-align-center">
+                    Cell Phone No. +923003518567
+                  </p>
                 </div>
 
                 {/* Index/Sidebar Navigation - fixed position */}

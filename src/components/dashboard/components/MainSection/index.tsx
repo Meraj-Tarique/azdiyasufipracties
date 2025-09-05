@@ -94,6 +94,7 @@ export default function MainSection() {
         >
           <h1 className="text-2xl leading-tight sm:text-4xl md:text-5xl mb-6 md:mb-8">
             بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+            
           </h1>
 
           <h1 className="text-2xl leading-tight sm:text-4xl md:text-5xl mb-8 md:mb-10">

@@ -30,64 +30,63 @@ export default function Services() {
 
   const description = (
     <>
-      The Life of the Final Messenger {pbuh} – A Journey of Faith, Struggle, and
-      Divine Love.
+      𝖳𝗁𝖾 𝖫𝗂𝖿𝖾 𝗈𝖿 𝗍𝗁𝖾 𝖥𝗂𝗇𝖺𝗅 𝖬𝖾𝗌𝗌𝖾𝗇𝗀𝖾𝗋 {pbuh} – 𝖠 𝖩𝗈𝗎𝗋𝗇𝖾𝗒 𝗈𝖿 𝖥𝖺𝗂𝗍𝗁, 𝖲𝗍𝗋𝗎𝗀𝗀𝗅𝖾, 𝖺𝗇𝖽 𝖣𝗂𝗏𝗂𝗇𝖾 𝖫𝗈𝗏𝖾.
     </>
   );
 
   const services = [
     {
-      title: "Qur'an",
+      title: "𝚀𝚞𝚛'𝚊𝚗",
       description:
-        "Explore the meticulous process of the Quran's compilation and collation, ensuring its authenticity and preservation.",
+        "𝖤𝗑𝗉𝗅𝗈𝗋𝖾 𝗍𝗁𝖾 𝗆𝖾𝗍𝗂𝖼𝗎𝗅𝗈𝗎𝗌 𝗉𝗋𝗈𝖼𝖾𝗌𝗌 𝗈𝖿 𝗍𝗁𝖾 𝖰𝗎𝗋𝖺𝗇'𝗌 𝖼𝗈𝗆𝗉𝗂𝗅𝖺𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝖼𝗈𝗅𝗅𝖺𝗍𝗂𝗈𝗇, 𝖾𝗇𝗌𝗎𝗋𝗂𝗇𝗀 𝗂𝗍𝗌 𝖺𝗎𝗍𝗁𝖾𝗇𝗍𝗂𝖼𝗂𝗍𝗒 𝖺𝗇𝖽 𝗉𝗋𝖾𝗌𝖾𝗋𝗏𝖺𝗍𝗂𝗈𝗇.",
       icon: getImagePath("quran-rehal.svg"),
       slug: "quran",
     },
     {
-      title: "Sunnah/Hadith",
+      title: "𝚂𝚞𝚗𝚗𝚊𝚑/𝙷𝚊𝚍𝚒𝚝𝚑",
       description:
-        "Essential Hadith & Sunnah gems in one accessible note for daily spiritual growth.",
+        "𝖤𝗌𝗌𝖾𝗇𝗍𝗂𝖺𝗅 𝖧𝖺𝖽𝗂𝗍𝗁 & 𝖲𝗎𝗇𝗇𝖺𝗁 𝗀𝖾𝗆𝗌 𝗂𝗇 𝗈𝗇𝖾 𝖺𝖼𝖼𝖾𝗌𝗌𝗂𝖻𝗅𝖾 𝗇𝗈𝗍𝖾 𝖿𝗈𝗋 𝖽𝖺𝗂𝗅𝗒 𝗌𝗉𝗂𝗋𝗂𝗍𝗎𝖺𝗅 𝗀𝗋𝗈𝗐𝗍𝗁.",
       icon: getImagePath("quran-rehal.svg"),
       slug: "sunnah",
     },
     {
-      title: "Seerah",
+      title: "𝚂𝚎𝚎𝚛𝚊𝚑",
       description: description,
       icon: getImagePath("quran-rehal.svg"),
       slug: "seerah",
     },
     {
-      title: "Beliefs & Creeds ",
+      title: "𝙱𝚎𝚕𝚒𝚎𝚏𝚜 & 𝙲𝚛𝚎𝚎𝚍𝚜",
       description:
-        "The Authentic Sunni Creed - Core Beliefs of Orthodox Islam According to Quran & Sunnah",
+        "𝖳𝗁𝖾 𝖠𝗎𝗍𝗁𝖾𝗇𝗍𝗂𝖼 𝖲𝗎𝗇𝗇𝗂 𝖢𝗋𝖾𝖾𝖽 - 𝖢𝗈𝗋𝖾 𝖡𝖾𝗅𝗂𝖾𝖿𝗌 𝗈𝖿 𝖮𝗋𝗍𝗁𝗈𝖽𝗈𝗑 𝖨𝗌𝗅𝖺𝗆 𝖠𝖼𝖼𝗈𝗋𝖽𝗂𝗇𝗀 𝗍𝗈 𝖰𝗎𝗋𝖺𝗇 & 𝖲𝗎𝗇𝗇𝖺𝗁",
       icon: getImagePath("quran-rehal.svg"),
       slug: "beliefs",
     },
     {
-      title: "Fiqh/Jurisprudence",
+      title: "𝙵𝚒𝚚𝚑/𝙹𝚞𝚛𝚒𝚜𝚙𝚛𝚞𝚍𝚎𝚗𝚌𝚎",
       description:
-        "Practical Islamic Rulings - The Fiqh of Daily Life from Authentic Sources",
+        "𝖯𝗋𝖺𝖼𝗍𝗂𝖼𝖺𝗅 𝖨𝗌𝗅𝖺𝗆𝗂𝖼 𝖱𝗎𝗅𝗂𝗇𝗀𝗌 - 𝖳𝗁𝖾 𝖥𝗂𝗊𝗁 𝗈𝖿 𝖣𝖺𝗂𝗅𝗒 𝖫𝗂𝖿𝖾 𝖿𝗋𝗈𝗆 𝖠𝗎𝗍𝗁𝖾𝗇𝗍𝗂𝖼 𝖲𝗈𝗎𝗋𝖼𝖾𝗌",
       icon: getImagePath("quran-rehal.svg"),
       slug: "fiqh",
     },
     {
-      title: "Sufi Practices/Ehsān",
+      title: "𝚂𝚞𝚏𝚒 𝙿𝚛𝚊𝚌𝚝𝚒𝚌𝚎𝚜/𝙴𝚑𝚜ā𝚗",
       description:
-        "Purifying the Heart - Essential Sufi Practices for Spiritual Excellence (Ihsān)",
+        "𝖯𝗎𝗋𝗂𝖿𝗒𝗂𝗇𝗀 𝗍𝗁𝖾 𝖧𝖾𝖺𝗋𝗍 - 𝖤𝗌𝗌𝖾𝗇𝗍𝗂𝖺𝗅 𝖲𝗎𝖿𝗂 𝖯𝗋𝖺𝖼𝗍𝗂𝖼𝖾𝗌 𝖿𝗈𝗋 𝖲𝗉𝗂𝗋𝗂𝗍𝗎𝖺𝗅 𝖤𝗑𝖼𝖾𝗅𝗅𝖾𝗇𝖼𝖾 (𝖤𝗁𝗌ā𝗇)",
       icon: getImagePath("quran-rehal.svg"),
       slug: "sufi-practices",
     },
 
     {
-      title: "Saints' Biographies",
-      description: "Lights of Guidance - Spiritual Giants of Islamic History",
+      title: "𝚂𝚊𝚒𝚗𝚝𝚜' 𝙱𝚒𝚘𝚐𝚛𝚊𝚙𝚑𝚒𝚎𝚜",
+      description: "𝖫𝗂𝗀𝗁𝗍𝗌 𝗈𝖿 𝖦𝗎𝗂𝖽𝖺𝗇𝖼𝖾 - 𝖲𝗉𝗂𝗋𝗂𝗍𝗎𝖺𝗅 𝖦𝗂𝖺𝗇𝗍𝗌 𝗈𝖿 𝖨𝗌𝗅𝖺𝗆𝗂𝖼 𝖧𝗂𝗌𝗍𝗈𝗋𝗒ā𝗇)",
       icon: getImagePath("quran-rehal.svg"),
       slug: "saints-biographies",
     },
     {
-      title: "Miscellaneous",
+      title: "𝙼𝚒𝚜𝚌𝚎𝚕𝚕𝚊𝚗𝚎𝚘𝚞𝚜",
       description:
-        "Islamic Gems Collection - Rare Insights Across Multiple Disciplines",
+        "𝖨𝗌𝗅𝖺𝗆𝗂𝖼 𝖦𝖾𝗆𝗌 𝖢𝗈𝗅𝗅𝖾𝖼𝗍𝗂𝗈𝗇 - 𝖱𝖺𝗋𝖾 𝖨𝗇𝗌𝗂𝗀𝗁𝗍𝗌 𝖠𝖼𝗋𝗈𝗌𝗌 𝖬𝗎𝗅𝗍𝗂𝗉𝗅𝖾 𝖣𝗂𝗌𝖼𝗂𝗉𝗅𝗂𝗇𝖾𝗌",
       icon: getImagePath("quran-rehal.svg"),
       slug: "miscellaneous",
     },

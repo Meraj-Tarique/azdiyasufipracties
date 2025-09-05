@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       'islamic-blog-app-spzz-git-main-merajtariqs-projects.vercel.app',
     ],
     remotePatterns: [
+       {
+        protocol: "https",
+        hostname: "hatchtechs.com",
+      },
       {
         protocol: "https",
         hostname: "s3.amazonaws.com",
