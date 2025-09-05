@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import DownloadButton from "@/components/DownloadButton";
+import MainHeading from "@/components/Headings/MainHeading";
 import styles from "@/styles/missionStyle.module.css";
 
 export const metadata = {
@@ -11,41 +12,32 @@ const BlogDetailPage = () => {
     <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
       <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-          <div className="bg-white-600 text-white p-6 items-center flex-col flex justify-center mb-8">
-            <h1
-              className="  text-center 
-              sm:text-3xl   
-               md:text-3xl 
-               lg:text-4xl 
-               xl:text-5xl 
-               2xl:text-6xl font-bold italic text-slate-800"
-            >
-              In the Name of ALLAH, the Beneficent, the Merciful
-            </h1>
-          </div>
+          <MainHeading />
           <div className={`text-center mb-12 ${styles.textStyle} relative`}>
-            <h1
-              className=" font-bold md:mb-2
-                 sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl
-                "
-            >
-              SUNNAH/HADITH
-            </h1>
             <h2
-              className="font-bold md:mb-2
-                 sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl"
+              className="
+              font-bold 
+              md:mb-2
+              sm:text-xl 
+              md:text-1xl 
+              lg:text-3xl 
+              xl:text-3xl"
             >
-              BRIEF INTRODUCTION TO THE SCIENCE OF HADITH
+                𝚂𝚄𝙽𝙽𝙰𝙷 / 𝙷𝙰𝙳𝙸𝚃𝙷
+              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Sunnah%20Hadith.pdf" />
             </h2>
-            <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Sunnah%20Hadith.pdf" />
+           
+            <h2
+              className="
+                 font-bold 
+                md:mb-2
+                sm:text-xl 
+                md:text-1xl 
+                lg:text-3xl 
+                xl:text-3xl"
+            >
+             𝙱𝚁𝙸𝙴𝙵 𝙸𝙽𝚃𝚁𝙾𝙳𝚄𝙲𝚃𝙸𝙾𝙽 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙲𝙸𝙴𝙽𝙲𝙴 𝙾𝙵 𝙷𝙰𝙳𝙸𝚃𝙷
+            </h2>
           </div>
           <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
             {/* Cover Page */}

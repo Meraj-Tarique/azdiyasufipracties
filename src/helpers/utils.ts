@@ -13,6 +13,14 @@ export const getImagePath = (imageName: string) => {
   }
 };
 
+export const getFilePath = (imageName: string) => {
+  if (process.env.NODE_ENV === "development") {
+    return `/pdf/${imageName}`;
+  } else {
+    return `/${imageName}`;
+  }
+};
+
 export const getBaseUrl = () => {
   if (process.env.NODE_ENV === "development") {
     return process.env.NEXT_PUBLIC_BASE_URL;

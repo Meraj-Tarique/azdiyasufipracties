@@ -6,6 +6,7 @@ import { Amiri } from "next/font/google";
 // import { useEffect, useRef, useState } from "react";
 import { sections } from "./Indexing/content";
 import DownloadButton from "@/components/DownloadButton";
+import MainHeading from "@/components/Headings/MainHeading";
 
 const amiri = Amiri({
   weight: "700",
@@ -61,18 +62,7 @@ const BlogDetailPage = () => {
       <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
         <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-            <div className="bg-white-600 text-white items-center flex-col flex justify-center mb-8">
-              <h1
-                className=" font-bold italic text-slate-800  text-center 
-               sm:text-3xl 
-               md:text-3xl 
-               lg:text-4xl 
-               xl:text-5xl 
-               2xl:text-6xl"
-              >
-                In the Name of ALLAH, the Beneficent, the Merciful
-              </h1>
-            </div>
+            <MainHeading/>
 
             <div className={`text-center mb-12 ${styles.textStyle} relative`}>
               {/* Download Button - Absolute positioned */}
@@ -80,12 +70,22 @@ const BlogDetailPage = () => {
               <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/main/The%20Radiant%20Seerah.pdf" />
               {/* Centered Headings */}
               <div className="mx-auto">
-                <h1 className="font-bold md:mb-2 sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-                  THE RADIANT SEERAH
+                <h1 className="font-bold 
+              md:mb-2
+              sm:text-xl 
+              md:text-1xl 
+              lg:text-3xl 
+              xl:text-3xl">
+                  𝚃𝙷𝙴 𝚁𝙰𝙳𝙸𝙰𝙽𝚃 𝚂𝙴𝙴𝚁𝙰𝙷
                 </h1>
-                <h2 className="font-bold mb-2 sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-                  Noble Prophet Muhammad{" "}
-                  <span className={`${amiri.className} text-xl inline`}>
+                <h2 className=" font-bold 
+                md:mb-2
+                sm:text-xl 
+                md:text-1xl 
+                lg:text-3xl 
+                xl:text-3xl">
+                  𝙽𝚘𝚋𝚕𝚎 𝙿𝚛𝚘𝚙𝚑𝚎𝚝 𝙼𝚞𝚑𝚊𝚖𝚖𝚊𝚍 {" "}
+                  <span className={`${amiri.className} text-4xl inline`}>
                     {" "}
                     ﷺ
                   </span>
@@ -184,7 +184,7 @@ const BlogDetailPage = () => {
                 ))}
 
                 {/* References and Contact */}
-                <div className="text-center mt-12 border-t pt-4">
+                <div className="text-center mt-12 border-t pt-4 ">
                   <h4 className="font-bold mb-2">References</h4>
                   <p>
                     1. Muhammad: His Life Based on the Earliest Sources - Martin
@@ -192,13 +192,15 @@ const BlogDetailPage = () => {
                   </p>
                   <p>2. The Sealed Nectar - Safi-ur-Rahman Al-Mubarakpuri</p>
                   <p>3. Tadween-e-Qur'an - Mawlana Syed Manazir Ahsan Gilani</p>
-
-                  <div className="mt-6">
-                    <p>Compiled by: Muhammad Junaid Khan</p>
-                    <p>Email: junaid.khan1962@gmail.com</p>
-                    <p>Phone: (+92) 300 3518567</p>
-                    <p>Karachi, Pakistan</p>
-                  </div>
+                </div>
+                <div className="text-center mt-12 border-t pt-4 ">
+                  <p className="text-align-center">Muhammad Junaid Khan</p>
+                  <p className="text-align-center">
+                    Email: Junaid.khan1962@gmail.com
+                  </p>
+                  <p className="text-align-center">
+                    Cell Phone No. +923003518567
+                  </p>
                 </div>
 
                 {/* Index/Sidebar Navigation - fixed position */}

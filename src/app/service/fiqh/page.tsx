@@ -3,6 +3,7 @@
 import styles from "@/styles/missionStyle.module.css";
 import { sections } from "./Content/content";
 import DownloadButton from "@/components/DownloadButton";
+import MainHeading from "@/components/Headings/MainHeading";
 
 // export const metadata = {
 //   title: "SEERAH",
@@ -52,39 +53,26 @@ const BlogDetailPage = () => {
       <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
         <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-            <div className="bg-white-600 text-white p-6 items-center flex-col flex justify-center mb-8">
-              <h1
-                className="text-center 
-              sm:text-3xl   
-               md:text-3xl 
-               lg:text-4xl 
-               xl:text-5xl 
-               2xl:text-6xl font-bold italic text-slate-800"
-              >
-                In the Name of ALLAH, the Beneficent, the Merciful
-              </h1>
-            </div>
+            <MainHeading/>
             <div className={`text-center mb-12 ${styles.textStyle} relative`}>
               <h1
                 className=" font-bold md:mb-2
-                 sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl
-                "
+                  sm:text-xl 
+              md:text-1xl 
+              lg:text-3xl 
+              xl:text-3xl
+                  "
               >
-                FIQH (JURISPRUDENCE)
+               𝙵𝙸𝚀𝙷 (𝙹𝚄𝚁𝙸𝚂𝙿𝚁𝚄𝙳𝙴𝙽𝙲𝙴)
               </h1>
               <h2
                 className="font-bold mb-2
-                   sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl"
+                   sm:text-xl 
+              md:text-1xl 
+              lg:text-3xl 
+              xl:text-3xl"
               >
-                AN INTEGRAL PART OF COMPREHENSIVE ISLAMIC LAW
+                𝙰𝙽 𝙸𝙽𝚃𝙴𝙶𝚁𝙰𝙻 𝙿𝙰𝚁𝚃 𝙾𝙵 𝙲𝙾𝙼𝙿𝚁𝙴𝙷𝙴𝙽𝚂𝙸𝚅𝙴 𝙸𝚂𝙻𝙰𝙼𝙸𝙲 𝙻𝙰𝚆
               </h2>
               <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Fiqh%20Jurisprudence.pdf" />
             </div>
@@ -178,10 +166,15 @@ const BlogDetailPage = () => {
                   </div>
 
                   <div className="text-center mt-6">
-                    <p>Compiled by: Muhammad Junaid Khan</p>
-                    <p>Email: junaid.khan1962@gmail.com</p>
-                    <p>Phone: (+92) 300 3518567</p>
-                    <p>Karachi, Pakistan</p>
+                    <div className="text-center mt-12 border-t pt-4 ">
+                      <p className="text-align-center">Muhammad Junaid Khan</p>
+                      <p className="text-align-center">
+                        Email: Junaid.khan1962@gmail.com
+                      </p>
+                      <p className="text-align-center">
+                        Cell Phone No. +923003518567
+                      </p>
+                    </div>
                   </div>
                 </div>
 

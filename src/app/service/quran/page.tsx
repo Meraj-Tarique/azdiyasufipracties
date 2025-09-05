@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import DownloadButton from "@/components/DownloadButton";
+import MainHeading from "@/components/Headings/MainHeading";
 import styles from "@/styles/missionStyle.module.css";
 import { Amiri } from "next/font/google";
 
@@ -25,28 +26,19 @@ const BlogDetailPage = () => {
     <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
       <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-          <div className="bg-white-600 text-white p-6 items-center flex-col flex justify-center mb-8">
-            <h1
-              className="  sm:text-3xl   text-center 
-               md:text-3xl 
-               lg:text-4xl 
-               xl:text-5xl 
-               2xl:text-6xl font-bold italic text-slate-800"
-            >
-              In the Name of ALLAH, the Beneficent, the Merciful
-            </h1>
-          </div>
+          <MainHeading/>
           <div className={`text-center mb-12 ${styles.textStyle} relative`}>
             {/* QURAN COMPILATION AND COLLATION.pdf */}
             <h2
-              className="font-bold md:mb-2
-                 sm:text-1xl 
-               md:text-2xl 
-               lg:text-3xl 
-               xl:text-4xl 
-               2xl:text-5xl"
+                className="
+                font-bold 
+                md:mb-2
+                sm:text-xl 
+                md:text-1xl 
+                lg:text-3xl 
+                xl:text-3xl"
             >
-              QUR'AN: COMPILATION AND COLLATION
+              𝚀𝚄𝚁'𝙰𝙽: 𝙲𝙾𝙼𝙿𝙸𝙻𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝙲𝙾𝙻𝙻𝙰𝚃𝙸𝙾𝙽
               <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/2937bfbe97a97556cf7cbbfb2732f85712830bff/QURAN%20COMPILATION%20AND%20COLLATION.pdf" />
             </h2>
           </div>
@@ -667,7 +659,7 @@ const BlogDetailPage = () => {
               <p className="text-align-center">
                 Email: Junaid.khan1962@gmail.com
               </p>
-              <p className="text-align-center">Cell Phone No. 00923003518567</p>
+              <p className="text-align-center">Cell Phone No. +923003518567</p>
             </div>
           </div>
         </div>
