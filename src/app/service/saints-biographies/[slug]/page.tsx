@@ -32,7 +32,9 @@ const PDFViewer = () => {
 
   useEffect(() => {
     // This code only runs on the client
-    setIsClient(true);
+    if (typeof window !== "undefined" && !isClient) {
+      setIsClient(true);
+    }
 
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -45,6 +47,14 @@ const PDFViewer = () => {
       window.removeEventListener("resize", checkIsMobile);
     };
   }, []);
+
+  if (!isClient) {
+    return (
+      <div className="flex justify-center items-center h-64">
+        Loading PDF viewer...
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
