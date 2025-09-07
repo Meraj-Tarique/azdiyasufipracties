@@ -10,7 +10,7 @@ import MainHeading from "@/components/Headings/MainHeading";
 
 const amiri = Amiri({
   weight: "700",
-  subsets: ["arabic"], // Must include 'arabic' subset
+  subsets: ["arabic"], 
   display: "swap",
 });
 
@@ -19,12 +19,7 @@ const amiri = Amiri({
 //   description: "This is about SEERAH.",
 // };
 
-// export const viewport = {
-//   width: "device-width",
-//   initialScale: 1,
-//   maximumScale: 1,
-//   userScalable: "no",
-// };
+
 
 const BlogDetailPage = () => {
   // const [activeSection, setActiveSection] = useState(null);
