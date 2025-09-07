@@ -4,6 +4,7 @@
 // https://tools.picsart.com/text/font-generator/small/
 
 import { Worker, Viewer, ProgressBar } from "@react-pdf-viewer/core";
+
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import MainHeading from "@/components/Headings/MainHeading";
@@ -16,6 +17,7 @@ import DownloadButton from "@/components/DownloadButton";
 // const ESignatureComponent = dynamic(() => import("@modules/filemanager/Esignature/"), {
 //   ssr: false,
 // });
+
 const PDFViewer = () => {
   const toolbarPluginInstance = toolbarPlugin();
   const { Toolbar } = toolbarPluginInstance;

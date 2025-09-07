@@ -33,11 +33,19 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  webpack: (config) => {
+    webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
+    if (!isServer) {
+      // Don't resolve 'fs' module on the client to prevent this error
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        canvas: false,
+      };
+    }
     return config;
   },
 };
