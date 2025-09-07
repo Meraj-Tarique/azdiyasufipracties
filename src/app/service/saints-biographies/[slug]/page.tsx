@@ -6,10 +6,10 @@
 
 // import { Worker, Viewer, ProgressBar } from "@react-pdf-viewer/core";
 
-import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+// import "@react-pdf-viewer/core/lib/styles/index.css";
+// import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import MainHeading from "@/components/Headings/MainHeading";
-import { toolbarPlugin } from "@react-pdf-viewer/toolbar";
+// import { toolbarPlugin } from "@react-pdf-viewer/toolbar";
 import { useEffect, useRef, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 // import { zoomPlugin } from "@react-pdf-viewer/zoom";
@@ -20,9 +20,9 @@ import DownloadButton from "@/components/DownloadButton";
 // });
 
 const PDFViewer = () => {
-  const toolbarPluginInstance = toolbarPlugin();
-  const { Toolbar } = toolbarPluginInstance;
-  const [isMobile, setIsMobile] = useState(false);
+  // const toolbarPluginInstance = toolbarPlugin();
+  // const { Toolbar } = toolbarPluginInstance;
+  const [/*isMobile*/, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const viewerRef = useRef(null);
   const { slug } = useParams();
@@ -114,7 +114,7 @@ const PDFViewer = () => {
                   }}
                   ref={viewerRef}
                 >
-                  <div
+                  {/* <div
                     style={{
                       alignItems: "center",
                       backgroundColor: "#eeeeee",
@@ -142,7 +142,6 @@ const PDFViewer = () => {
                         } = props;
                         return (
                           <>
-                            {/* Top row for mobile */}
                             <div
                               style={{
                                 display: "flex",
@@ -177,7 +176,6 @@ const PDFViewer = () => {
                               )}
                             </div>
 
-                            {/* Bottom row for mobile */}
                             <div
                               style={{
                                 display: "flex",
@@ -245,7 +243,7 @@ const PDFViewer = () => {
                         );
                       }}
                     </Toolbar>
-                  </div>
+                  </div> */}
                   <div
                     style={{
                       flex: 1,
