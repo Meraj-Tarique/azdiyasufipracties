@@ -1,9 +1,10 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-unescaped-entities */
+
 // https://tools.picsart.com/text/font-generator/small/
 
-import { Worker, Viewer, ProgressBar } from "@react-pdf-viewer/core";
+// import { Worker, Viewer, ProgressBar } from "@react-pdf-viewer/core";
 
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
@@ -11,7 +12,7 @@ import MainHeading from "@/components/Headings/MainHeading";
 import { toolbarPlugin } from "@react-pdf-viewer/toolbar";
 import { useEffect, useRef, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
-import { zoomPlugin } from "@react-pdf-viewer/zoom";
+// import { zoomPlugin } from "@react-pdf-viewer/zoom";
 import DownloadButton from "@/components/DownloadButton";
 
 // const ESignatureComponent = dynamic(() => import("@modules/filemanager/Esignature/"), {
@@ -27,7 +28,7 @@ const PDFViewer = () => {
   const { slug } = useParams();
   const search = useSearchParams();
   const Title = search.get("name");
-  const zoomPluginInstance = zoomPlugin();
+  // const zoomPluginInstance = zoomPlugin();
   const [pdfFile /*setPdfFile */] = useState(`/documents/${slug}.pdf`);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const PDFViewer = () => {
     return () => {
       window.removeEventListener("resize", checkIsMobile);
     };
-  }, []);
+  }, [isClient]);
 
   if (!isClient) {
     return (
@@ -252,35 +253,34 @@ const PDFViewer = () => {
                       position: "relative",
                     }}
                   >
-                    {pdfFile ? (
-                      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-                        <Viewer
-                          fileUrl={pdfFile}
-                          // plugins={[toolbarPluginInstance]}
-                          plugins={[toolbarPluginInstance, zoomPluginInstance]}
-                          defaultScale={1}
-                          renderLoader={(percentages: any) => (
-                            <div
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <div style={{ width: "240px" }}>
-                                <ProgressBar
-                                  progress={Math.round(percentages)}
-                                />
-                              </div>
-                            </div>
-                          )}
-                        />
-                      </Worker>
-                    ) : (
-                      "loading..."
-                    )}
+                    {pdfFile
+                      ? // <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+                        //   <Viewer
+                        //     fileUrl={pdfFile}
+                        //     // plugins={[toolbarPluginInstance]}
+                        //     plugins={[toolbarPluginInstance, zoomPluginInstance]}
+                        //     defaultScale={1}
+                        //     renderLoader={(percentages: any) => (
+                        //       <div
+                        //         style={{
+                        //           width: "100%",
+                        //           height: "100%",
+                        //           display: "flex",
+                        //           alignItems: "center",
+                        //           justifyContent: "center",
+                        //         }}
+                        //       >
+                        //         <div style={{ width: "240px" }}>
+                        //           <ProgressBar
+                        //             progress={Math.round(percentages)}
+                        //           />
+                        //         </div>
+                        //       </div>
+                        //     )}
+                        //   />
+                        // </Worker>
+                        ""
+                      : "loading..."}
                   </div>
                 </div>
               ) : (
