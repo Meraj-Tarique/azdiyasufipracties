@@ -19,8 +19,6 @@ const amiri = Amiri({
 //   description: "This is about SEERAH.",
 // };
 
-
-
 const BlogDetailPage = () => {
   // const [activeSection, setActiveSection] = useState(null);
   // const contentRef = useRef(null);
