@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "rm -rf node_modules package-lock.json",
+    "postinstall": "npm cache clean --force"
   },
   "dependencies": {
     "@babel/core": "^7.26.0",

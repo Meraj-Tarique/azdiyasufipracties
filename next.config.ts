@@ -3,6 +3,7 @@ import { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "standalone",
+  swcMinify: false,
   images: {
     domains: [
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",
