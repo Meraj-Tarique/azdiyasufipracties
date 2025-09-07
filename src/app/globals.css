@@ -146,7 +146,25 @@ li {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+}
 
+
+.sufi-Big-Image {
+  position: relative;
+}
+
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/sufiBigImg3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1.8px) brightness(0.3) contrast(0.9) grayscale(0.5) hue-rotate(24deg);
+  -webkit-filter: blur(1.8px) brightness(0.3) contrast(0.9) grayscale(0.5) hue-rotate(24deg);
 }
 
 .quran-highlight {

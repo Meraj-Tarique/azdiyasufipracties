@@ -23,10 +23,8 @@ const BlogDetailPage = () => {
               lg:text-3xl 
               xl:text-3xl"
             >
-                𝚂𝚄𝙽𝙽𝙰𝙷 / 𝙷𝙰𝙳𝙸𝚃𝙷
-              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Sunnah%20Hadith.pdf" />
+              𝚂𝚄𝙽𝙽𝙰𝙷 / 𝙷𝙰𝙳𝙸𝚃𝙷
             </h2>
-           
             <h2
               className="
                  font-bold 
@@ -36,8 +34,9 @@ const BlogDetailPage = () => {
                 lg:text-3xl 
                 xl:text-3xl"
             >
-             𝙱𝚁𝙸𝙴𝙵 𝙸𝙽𝚃𝚁𝙾𝙳𝚄𝙲𝚃𝙸𝙾𝙽 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙲𝙸𝙴𝙽𝙲𝙴 𝙾𝙵 𝙷𝙰𝙳𝙸𝚃𝙷
+              𝙱𝚁𝙸𝙴𝙵 𝙸𝙽𝚃𝚁𝙾𝙳𝚄𝙲𝚃𝙸𝙾𝙽 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙲𝙸𝙴𝙽𝙲𝙴 𝙾𝙵 𝙷𝙰𝙳𝙸𝚃𝙷
             </h2>
+            <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/ebe1a2a173aef33d75e2cbd4d4e13161ffe43eec/Sunnah%20Hadith.pdf" />
           </div>
           <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
             {/* Cover Page */}

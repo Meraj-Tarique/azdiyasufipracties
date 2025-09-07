@@ -11,64 +11,27 @@ import { toolbarPlugin } from "@react-pdf-viewer/toolbar";
 import { useEffect, useRef, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { zoomPlugin } from "@react-pdf-viewer/zoom";
+import DownloadButton from "@/components/DownloadButton";
 
 // const ESignatureComponent = dynamic(() => import("@modules/filemanager/Esignature/"), {
 //   ssr: false,
 // });
 const PDFViewer = () => {
-  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const toolbarPluginInstance = toolbarPlugin();
   const { Toolbar } = toolbarPluginInstance;
   const [isMobile, setIsMobile] = useState(false);
-  // const [initialZoom, setInitialZoom] = useState(1);
+  const [isClient, setIsClient] = useState(false);
   const viewerRef = useRef(null);
   const { slug } = useParams();
   const search = useSearchParams();
   const Title = search.get("name");
-  // Create plugins
   const zoomPluginInstance = zoomPlugin();
-  // const { ZoomIn, ZoomOut } = zoomPluginInstance;
   const [pdfFile /*setPdfFile */] = useState(`/documents/${slug}.pdf`);
 
-  // Check if device is mobile and set appropriate zoom
-  // useEffect(() => {
-  //   const checkIsMobile = () => {
-  //     const mobile = window.innerWidth <= 768;
-  //     setIsMobile(mobile);
-
-  //     // Set appropriate zoom level based on screen size
-  //     if (mobile) {
-  //       // For mobile devices, set a higher zoom level
-  //       setInitialZoom(1.5);
-  //       if (ZoomIn) {
-  //         ZoomIn(1.5);
-  //       }
-  //     } else {
-  //       // For desktop, use normal zoom
-  //       setInitialZoom(1);
-  //       if (ZoomIn) {
-  //         ZoomIn(1);
-  //       }
-  //     }
-  //   };
-
-  //   checkIsMobile();
-  //   window.addEventListener("resize", checkIsMobile);
-
-  //   return () => {
-  //     window.removeEventListener("resize", checkIsMobile);
-  //   };
-  // }, [ZoomIn]);
-
-  // Function to handle manual zoom changes
-  // const setZoomLevel = (level: any) => {
-  //   if (level) {
-  //     ZoomIn(level);
-  //     setInitialZoom(level);
-  //   }
-  // };
-
   useEffect(() => {
+    // This code only runs on the client
+    setIsClient(true);
+
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -80,6 +43,7 @@ const PDFViewer = () => {
       window.removeEventListener("resize", checkIsMobile);
     };
   }, []);
+
   return (
     <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
       <div className="lg:p-8 pt-1 space-y-2 w-full lg:w-[85%] mx-auto">
@@ -92,6 +56,7 @@ const PDFViewer = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-slate-700 mb-1">
                 {Title}
               </h2>
+              <DownloadButton url={pdfFile} />
             </div>
           </div>
           <div>
@@ -122,183 +87,198 @@ const PDFViewer = () => {
                 </div>
               </div> */}
 
-              <div
-                className="rpv-core__viewer"
-                style={{
-                  border: "1px solid rgba(0, 0, 0, 0.3)",
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  minHeight: "500px",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                }}
-                ref={viewerRef}
-              >
+              {isClient ? (
                 <div
+                  className="rpv-core__viewer"
                   style={{
-                    alignItems: "center",
-                    backgroundColor: "#eeeeee",
-                    borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                    border: "1px solid rgba(0, 0, 0, 0.3)",
                     display: "flex",
-                    padding: "4px",
-                    flexWrap: isMobile ? "wrap" : "nowrap",
-                    minHeight: isMobile ? "80px" : "auto",
+                    flexDirection: "column",
+                    height: "100%",
+                    minHeight: "500px",
+                    borderRadius: "8px",
+                    overflow: "hidden",
                   }}
+                  ref={viewerRef}
                 >
-                  <Toolbar>
-                    {(props) => {
-                      const {
-                        CurrentPageInput,
-                        Download,
-                        EnterFullScreen,
-                        GoToNextPage,
-                        GoToPreviousPage,
-                        NumberOfPages,
-                        Print,
-                        ShowSearchPopover,
-                        Zoom,
-                        ZoomIn,
-                        ZoomOut,
-                      } = props;
-                      return (
-                        <>
-                          {/* Top row for mobile */}
-                          <div
-                            style={{
-                              display: "flex",
-                              width: isMobile ? "100%" : "auto",
-                              justifyContent: isMobile
-                                ? "space-between"
-                                : "flex-start",
-                              marginBottom: isMobile ? "8px" : "0",
-                            }}
-                          >
-                            <div style={{ padding: "0px 2px" }}>
-                              <ShowSearchPopover />
-                            </div>
-                            <div style={{ padding: "0px 2px" }}>
-                              <ZoomOut />
-                            </div>
-                            <div style={{ padding: "0px 2px" }}>
-                              <Zoom />
-                            </div>
-                            <div style={{ padding: "0px 2px" }}>
-                              <ZoomIn />
-                            </div>
-                            {!isMobile && (
-                              <div
-                                style={{
-                                  padding: "0px 2px",
-                                  marginLeft: "auto",
-                                }}
-                              >
-                                <EnterFullScreen />
+                  <div
+                    style={{
+                      alignItems: "center",
+                      backgroundColor: "#eeeeee",
+                      borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                      display: "flex",
+                      padding: "4px",
+                      flexWrap: isMobile ? "wrap" : "nowrap",
+                      minHeight: isMobile ? "80px" : "auto",
+                    }}
+                  >
+                    <Toolbar>
+                      {(props) => {
+                        const {
+                          CurrentPageInput,
+                          Download,
+                          EnterFullScreen,
+                          GoToNextPage,
+                          GoToPreviousPage,
+                          NumberOfPages,
+                          Print,
+                          ShowSearchPopover,
+                          Zoom,
+                          ZoomIn,
+                          ZoomOut,
+                        } = props;
+                        return (
+                          <>
+                            {/* Top row for mobile */}
+                            <div
+                              style={{
+                                display: "flex",
+                                width: isMobile ? "100%" : "auto",
+                                justifyContent: isMobile
+                                  ? "space-between"
+                                  : "flex-start",
+                                marginBottom: isMobile ? "8px" : "0",
+                              }}
+                            >
+                              <div style={{ padding: "0px 2px" }}>
+                                <ShowSearchPopover />
                               </div>
-                            )}
-                          </div>
-
-                          {/* Bottom row for mobile */}
-                          <div
-                            style={{
-                              display: "flex",
-                              width: isMobile ? "100%" : "auto",
-                              justifyContent: isMobile
-                                ? "space-between"
-                                : "flex-start",
-                            }}
-                          >
-                            <div style={{ padding: "0px 2px" }}>
-                              <GoToPreviousPage />
-                            </div>
-                            <div
-                              style={{
-                                padding: "0px 2px",
-                                width: isMobile ? "3rem" : "4rem",
-                                display: "flex",
-                                alignItems: "center",
-                              }}
-                            >
-                              <CurrentPageInput />
-                            </div>
-                            <div
-                              style={{
-                                padding: "0px 2px",
-                                display: "flex",
-                                alignItems: "center",
-                              }}
-                            >
-                              / <NumberOfPages />
-                            </div>
-                            <div style={{ padding: "0px 2px" }}>
-                              <GoToNextPage />
-                            </div>
-
-                            {isMobile ? (
-                              <>
-                                <div style={{ padding: "0px 2px" }}>
-                                  <Download />
-                                </div>
-                                <div style={{ padding: "0px 2px" }}>
-                                  <Print />
-                                </div>
-                                <div style={{ padding: "0px 2px" }}>
-                                  <EnterFullScreen />
-                                </div>
-                              </>
-                            ) : (
-                              <>
+                              <div style={{ padding: "0px 2px" }}>
+                                <ZoomOut />
+                              </div>
+                              <div style={{ padding: "0px 2px" }}>
+                                <Zoom />
+                              </div>
+                              <div style={{ padding: "0px 2px" }}>
+                                <ZoomIn />
+                              </div>
+                              {!isMobile && (
                                 <div
                                   style={{
                                     padding: "0px 2px",
                                     marginLeft: "auto",
                                   }}
                                 >
-                                  <Download />
+                                  <EnterFullScreen />
                                 </div>
-                                <div style={{ padding: "0px 2px" }}>
-                                  <Print />
-                                </div>
-                              </>
-                            )}
-                          </div>
-                        </>
-                      );
+                              )}
+                            </div>
+
+                            {/* Bottom row for mobile */}
+                            <div
+                              style={{
+                                display: "flex",
+                                width: isMobile ? "100%" : "auto",
+                                justifyContent: isMobile
+                                  ? "space-between"
+                                  : "flex-start",
+                              }}
+                            >
+                              <div style={{ padding: "0px 2px" }}>
+                                <GoToPreviousPage />
+                              </div>
+                              <div
+                                style={{
+                                  padding: "0px 2px",
+                                  width: isMobile ? "3rem" : "4rem",
+                                  display: "flex",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <CurrentPageInput />
+                              </div>
+                              <div
+                                style={{
+                                  padding: "0px 2px",
+                                  display: "flex",
+                                  alignItems: "center",
+                                }}
+                              >
+                                / <NumberOfPages />
+                              </div>
+                              <div style={{ padding: "0px 2px" }}>
+                                <GoToNextPage />
+                              </div>
+
+                              {isMobile ? (
+                                <>
+                                  <div style={{ padding: "0px 2px" }}>
+                                    <Download />
+                                  </div>
+                                  <div style={{ padding: "0px 2px" }}>
+                                    <Print />
+                                  </div>
+                                  <div style={{ padding: "0px 2px" }}>
+                                    <EnterFullScreen />
+                                  </div>
+                                </>
+                              ) : (
+                                <>
+                                  <div
+                                    style={{
+                                      padding: "0px 2px",
+                                      marginLeft: "auto",
+                                    }}
+                                  >
+                                    <Download />
+                                  </div>
+                                  <div style={{ padding: "0px 2px" }}>
+                                    <Print />
+                                  </div>
+                                </>
+                              )}
+                            </div>
+                          </>
+                        );
+                      }}
+                    </Toolbar>
+                  </div>
+                  <div
+                    style={{
+                      flex: 1,
+                      overflow: "hidden",
+                      position: "relative",
                     }}
-                  </Toolbar>
+                  >
+                    {pdfFile ? (
+                      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+                        <Viewer
+                          fileUrl={pdfFile}
+                          // plugins={[toolbarPluginInstance]}
+                          plugins={[toolbarPluginInstance, zoomPluginInstance]}
+                          defaultScale={1}
+                          renderLoader={(percentages: any) => (
+                            <div
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
+                              <div style={{ width: "240px" }}>
+                                <ProgressBar
+                                  progress={Math.round(percentages)}
+                                />
+                              </div>
+                            </div>
+                          )}
+                        />
+                      </Worker>
+                    ) : (
+                      "loading..."
+                    )}
+                  </div>
                 </div>
-                <div
-                  style={{
-                    flex: 1,
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
-                >
-                  <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-                    <Viewer
-                      fileUrl={pdfFile}
-                      // plugins={[toolbarPluginInstance]}
-                      plugins={[toolbarPluginInstance, zoomPluginInstance]}
-                      defaultScale={1}
-                      renderLoader={(percentages: any) => (
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <div style={{ width: "240px" }}>
-                            <ProgressBar progress={Math.round(percentages)} />
-                          </div>
-                        </div>
-                      )}
-                    />
-                  </Worker>
+              ) : (
+                <div className="flex justify-center items-center h-96">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+                    <p className="mt-4 text-gray-600">Loading PDF viewer...</p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

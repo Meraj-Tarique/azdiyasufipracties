@@ -62,34 +62,34 @@ const BlogDetailPage = () => {
       <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
         <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-            <MainHeading/>
-
+            <MainHeading />
             <div className={`text-center mb-12 ${styles.textStyle} relative`}>
-              {/* Download Button - Absolute positioned */}
-
-              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/main/The%20Radiant%20Seerah.pdf" />
-              {/* Centered Headings */}
               <div className="mx-auto">
-                <h1 className="font-bold 
+                <h1
+                  className="font-bold 
               md:mb-2
               sm:text-xl 
               md:text-1xl 
               lg:text-3xl 
-              xl:text-3xl">
+              xl:text-3xl"
+                >
                   𝚃𝙷𝙴 𝚁𝙰𝙳𝙸𝙰𝙽𝚃 𝚂𝙴𝙴𝚁𝙰𝙷
                 </h1>
-                <h2 className=" font-bold 
+                <h2
+                  className=" font-bold 
                 md:mb-2
                 sm:text-xl 
                 md:text-1xl 
                 lg:text-3xl 
-                xl:text-3xl">
-                  𝙽𝚘𝚋𝚕𝚎 𝙿𝚛𝚘𝚙𝚑𝚎𝚝 𝙼𝚞𝚑𝚊𝚖𝚖𝚊𝚍 {" "}
+                xl:text-3xl"
+                >
+                  𝙽𝚘𝚋𝚕𝚎 𝙿𝚛𝚘𝚙𝚑𝚎𝚝 𝙼𝚞𝚑𝚊𝚖𝚖𝚊𝚍{" "}
                   <span className={`${amiri.className} text-4xl inline`}>
                     {" "}
                     ﷺ
                   </span>
                 </h2>
+                <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/main/The%20Radiant%20Seerah.pdf" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">

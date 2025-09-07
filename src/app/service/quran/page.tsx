@@ -26,11 +26,11 @@ const BlogDetailPage = () => {
     <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">
       <div className="lg:p-6 pt-2 space-y-6 w-full lg:w-[85%] mx-auto">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
-          <MainHeading/>
+          <MainHeading />
           <div className={`text-center mb-12 ${styles.textStyle} relative`}>
             {/* QURAN COMPILATION AND COLLATION.pdf */}
             <h2
-                className="
+              className="
                 font-bold 
                 md:mb-2
                 sm:text-xl 
@@ -39,8 +39,8 @@ const BlogDetailPage = () => {
                 xl:text-3xl"
             >
               𝚀𝚄𝚁'𝙰𝙽: 𝙲𝙾𝙼𝙿𝙸𝙻𝙰𝚃𝙸𝙾𝙽 𝙰𝙽𝙳 𝙲𝙾𝙻𝙻𝙰𝚃𝙸𝙾𝙽
-              <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/2937bfbe97a97556cf7cbbfb2732f85712830bff/QURAN%20COMPILATION%20AND%20COLLATION.pdf" />
             </h2>
+            <DownloadButton url="https://raw.githubusercontent.com/Meraj-Tarique/azdiyasufipracties/2937bfbe97a97556cf7cbbfb2732f85712830bff/QURAN%20COMPILATION%20AND%20COLLATION.pdf" />
           </div>
           <div className="max-w-4xl mx-auto md:p-6 bg-white text-slate-800 font-sans">
             {/* Section 1 */}
