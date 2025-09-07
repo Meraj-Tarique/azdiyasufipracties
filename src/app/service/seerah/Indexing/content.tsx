@@ -3,7 +3,7 @@ import { Amiri } from "next/font/google";
 
 const amiri = Amiri({
   weight: "700",
-  subsets: ["arabic"], // Must include 'arabic' subset
+  subsets: ["arabic"],
   display: "swap",
 });
 
