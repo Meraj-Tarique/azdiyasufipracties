@@ -44,6 +44,7 @@ const nextConfig: NextConfig = {
         ...config.resolve.fallback,
         fs: false,
         canvas: false,
+        encoding: false,
       };
     }
     return config;
