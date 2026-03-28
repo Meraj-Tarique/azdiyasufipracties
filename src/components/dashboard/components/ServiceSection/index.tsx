@@ -30,7 +30,7 @@ export default function Services() {
 
   const description = (
     <>
-      𝖳𝗁𝖾 𝖫𝗂𝖿𝖾 𝗈𝖿 𝗍𝗁𝖾 𝖥𝗂𝗇𝖺𝗅 𝖬𝖾𝗌𝗌𝖾𝗇𝗀𝖾𝗋 {pbuh} – 𝖠 𝖩𝗈𝗎𝗋𝗇𝖾𝗒 𝗈𝖿 𝖥𝖺𝗂𝗍𝗁, 𝖲𝗍𝗋𝗎𝗀𝗀𝗅𝖾, 𝖺𝗇𝖽 𝖣𝗂𝗏𝗂𝗇𝖾 𝖫𝗈𝗏𝖾.
+      𝖳𝗁𝖾 𝖫𝗂𝖿𝖾 𝗈𝖿 𝗍𝗁𝖾 𝖥𝗂𝗇𝖺𝗅 𝖬𝖾𝗌𝗌𝖾𝗇𝗀𝖾𝗋 {pbuh} - 𝖠 𝖩𝗈𝗎𝗋𝗇𝖾𝗒 𝗈𝖿 𝖥𝖺𝗂𝗍𝗁, 𝖲𝗍𝗋𝗎𝗀𝗀𝗅𝖾, 𝖺𝗇𝖽 𝖣𝗂𝗏𝗂𝗇𝖾 𝖫𝗈𝗏𝖾.
     </>
   );
 
@@ -79,9 +79,15 @@ export default function Services() {
 
     {
       title: "𝚂𝚊𝚒𝚗𝚝𝚜' 𝙱𝚒𝚘𝚐𝚛𝚊𝚙𝚑𝚒𝚎𝚜",
-      description: "𝖫𝗂𝗀𝗁𝗍𝗌 𝗈𝖿 𝖦𝗎𝗂𝖽𝖺𝗇𝖼𝖾 - 𝖲𝗉𝗂𝗋𝗂𝗍𝗎𝖺𝗅 𝖦𝗂𝖺𝗇𝗍𝗌 𝗈𝖿 𝖨𝗌𝗅𝖺𝗆𝗂𝖼 𝖧𝗂𝗌𝗍𝗈𝗋𝗒ā𝗇)",
+      description: "𝖫𝗂𝗀𝗁𝗍𝗌 𝗈𝖿 𝖦𝗎𝗂𝖽𝖺𝗇𝖼𝖾 - 𝖲𝗉𝗂𝗋𝗂𝗍𝗎𝖺𝗅 𝖦𝗂𝖺𝗇𝗍𝗌 𝗈𝖿 𝖨𝗌𝗅𝖺𝗆𝗂𝖼 𝖧𝗂𝗌𝗍𝗈𝗋𝗒ā𝗇",
       icon: getImagePath("quran-rehal.svg"),
       slug: "saints-biographies",
+    },
+     {
+      title: "Spiritual Infulence",
+      description: "What is known as Tawajoh and Nisbat in Sofism",
+      icon: getImagePath("quran-rehal.svg"),
+      slug: "spritual-infulence",
     },
     {
       title: "𝙼𝚒𝚜𝚌𝚎𝚕𝚕𝚊𝚗𝚎𝚘𝚞𝚜",

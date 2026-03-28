@@ -90,7 +90,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className={`${
                     isScrolled ? "text-zinc-950" : "text-white"
                   } hover:text-[#C5A059] transition-colors`}
