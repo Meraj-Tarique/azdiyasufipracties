@@ -1,6 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import MainHeading from "@/components/Headings/MainHeading";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = createMetadata({
+  title: "Miscellaneous Islamic Resources",
+  description:
+    "A collection of miscellaneous Islamic resources, rare insights, and additional teachings across multiple Islamic disciplines.",
+  path: "/service/miscellaneous",
+  keywords: ["Islamic resources", "miscellaneous Islamic teachings", "Islamic gems"],
+});
 
 const ComingSoon = () => {
   return (

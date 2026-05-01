@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 // "use client";
+import { createMetadata } from "@/lib/seo";
 import styles from "@/styles/missionStyle.module.css";
+import type { Metadata } from "next";
 import { Amiri } from "next/font/google";
 // import ContentWithIndex from "./Indexing/ContentWithIndex";
 // import { useEffect, useRef, useState } from "react";
@@ -14,10 +16,13 @@ const amiri = Amiri({
   display: "swap",
 });
 
-// export const metadata = {
-//   title: "SEERAH",
-//   description: "This is about SEERAH.",
-// };
+export const metadata: Metadata = createMetadata({
+  title: "The Radiant Seerah",
+  description:
+    "Study the life, character, mission, and teachings of Prophet Muhammad through a concise Seerah compilation based on early Islamic sources.",
+  path: "/service/seerah",
+  keywords: ["Seerah", "Prophet Muhammad", "Radiant Seerah", "Islamic biography"],
+});
 
 const BlogDetailPage = () => {
   // const [activeSection, setActiveSection] = useState(null);

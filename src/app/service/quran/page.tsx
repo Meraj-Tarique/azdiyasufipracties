@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import DownloadButton from "@/components/DownloadButton";
 import MainHeading from "@/components/Headings/MainHeading";
+import { createMetadata } from "@/lib/seo";
 import styles from "@/styles/missionStyle.module.css";
+import type { Metadata } from "next";
 import { Amiri } from "next/font/google";
+import Image from "next/image";
 
 // const ESignatureComponent = dynamic(() => import("@modules/filemanager/Esignature/"), {
 //   ssr: false,
@@ -14,10 +17,14 @@ const amiri = Amiri({
   display: "swap",
 });
 
-export const metadata = {
-  title: "QURAN Page",
-  description: "This is about QURAN.",
-};
+export const metadata: Metadata = createMetadata({
+  title: "Qur'an Compilation and Collation",
+  description:
+    "Learn about the preservation, compilation, collation, writing materials, and arrangement of the Holy Qur'an.",
+  path: "/service/quran",
+  keywords: ["Holy Quran", "Quran preservation", "Quran compilation and collation"],
+  image: "/assets/images/quran-title-page.jpg",
+});
 
 export const viewport = {
   width: "device-width",
@@ -32,6 +39,16 @@ const BlogDetailPage = () => {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
           <MainHeading />
           <div className={`text-center mb-12 ${styles.textStyle} relative`}>
+            <div className="mx-auto mb-8 max-w-md">
+              <Image
+                src="/assets/images/quran-title-page.jpg"
+                alt="The Holy Qur'an compilation and collaction title page"
+                width={497}
+                height={711}
+                className="h-auto w-full rounded-lg border border-slate-200 shadow-md"
+                priority
+              />
+            </div>
             {/* QURAN COMPILATION AND COLLATION.pdf */}
             <h2
               className="

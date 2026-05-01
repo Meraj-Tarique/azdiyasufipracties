@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import React from "react";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Page Not Found",
+  description: "The requested page could not be found on Azdiya Sufi Practices.",
+  noIndex: true,
+});
 
 const NotFoundPage = () => {
   return (
@@ -7,11 +15,6 @@ const NotFoundPage = () => {
       <p className="text-xl mt-4">Page not found</p>
     </div>
   );
-};
-
-export const metadata = {
-  title: "404 - Page Not Found",
-  description: "The page you are looking for does not exist.",
 };
 
 export const viewport = {

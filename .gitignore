@@ -56,3 +56,5 @@ bundle-stats.html
 
 yarn.lock
 
+.codex
+docs/

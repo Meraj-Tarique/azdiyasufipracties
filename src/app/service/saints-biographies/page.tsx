@@ -1,6 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = createMetadata({
+  title: "Saints' Biographies",
+  description:
+    "Read biographies of Islamic saints and spiritual guides including Hazrat Hamid Hasan Alawi and Syed Abdul Bari Shah.",
+  path: "/service/saints-biographies",
+  keywords: ["saints biographies", "Islamic saints", "Sufi saints", "spiritual guides"],
+  image: "/assets/images/sufiBigImg3.jpg",
+});
 
 const SaintsBiographic = () => {
   return (

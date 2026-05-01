@@ -1,15 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 // "use client";
+import { createMetadata } from "@/lib/seo";
 import styles from "@/styles/missionStyle.module.css";
 import { sections } from "./Content/content";
 import DownloadButton from "@/components/DownloadButton";
 import MainHeading from "@/components/Headings/MainHeading";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-// export const metadata = {
-//   title: "SEERAH",
-//   description: "This is about SEERAH.",
-// };
+export const metadata: Metadata = createMetadata({
+  title: "Beliefs and Creeds of Ahl As-Sunnah Wa'l-Jama'ah",
+  description:
+    "Read about the core beliefs and creeds of Ahl As-Sunnah Wa'l-Jama'ah according to orthodox Islamic teachings.",
+  path: "/service/beliefs",
+  keywords: ["Ahl As-Sunnah", "Islamic beliefs", "Aqeedah", "Sunni creed"],
+});
 
 // export const viewport = {
 //   width: "device-width",

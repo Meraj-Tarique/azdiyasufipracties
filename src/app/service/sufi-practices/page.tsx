@@ -1,6 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import MainHeading from "@/components/Headings/MainHeading";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = createMetadata({
+  title: "Sufi Practices and Ehsan",
+  description:
+    "Explore Sufi practices, Ehsan, purification of the heart, and spiritual resources prepared for Islamic spiritual growth.",
+  path: "/service/sufi-practices",
+  keywords: ["Sufi practices", "Ehsan", "Tasawwuf", "purification of the heart"],
+});
 
 const ComingSoon = () => {
   return (

@@ -1,12 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import DownloadButton from "@/components/DownloadButton";
 import MainHeading from "@/components/Headings/MainHeading";
+import { createMetadata } from "@/lib/seo";
 import styles from "@/styles/missionStyle.module.css";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Sunnah Page",
-  description: "This is about Sunnah.",
-};
+export const metadata: Metadata = createMetadata({
+  title: "Sunnah and Hadith",
+  description:
+    "A brief introduction to the science of Hadith, Sunnah, Hadith categories, terminology, references, and preservation of Prophetic traditions.",
+  path: "/service/sunnah",
+  keywords: ["Sunnah", "Hadith", "science of Hadith", "Prophetic traditions"],
+});
 const BlogDetailPage = () => {
   return (
     <div className="max-w-8xl mx-auto py-10 px-5 mt-8 text-xl">

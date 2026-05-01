@@ -1,7 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import MainHeading from "@/components/Headings/MainHeading";
+import { createMetadata } from "@/lib/seo";
 import styles from "@/styles/missionStyle.module.css";
+import type { Metadata } from "next";
 import { Amiri } from "next/font/google";
+import Image from "next/image";
 
 // const ESignatureComponent = dynamic(() => import("@modules/filemanager/Esignature/"), {
 //   ssr: false,
@@ -13,10 +16,14 @@ const amiri = Amiri({
   display: "swap",
 });
 
-export const metadata = {
-  title: "QURAN Page",
-  description: "This is about QURAN.",
-};
+export const metadata: Metadata = createMetadata({
+  title: "Spiritual Influence in Sufism",
+  description:
+    "Learn about spiritual influence, Tawajoh, Nisbat, Prophetic duties, and purification of the soul in Islamic spirituality.",
+  path: "/service/spritual-infulence",
+  keywords: ["spiritual influence", "Tawajoh", "Nisbat", "Sufism", "Tazkiyah"],
+  image: "/assets/images/spiritual-influence-title-page.jpg",
+});
 
 export const viewport = {
   width: "device-width",
@@ -31,6 +38,16 @@ const SpritualInfulence = () => {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden p-2">
           <MainHeading />
           <div className={`text-center mb-12 ${styles.textStyle} relative`}>
+            <div className="mx-auto mb-8 max-w-md">
+              <Image
+                src="/assets/images/spiritual-influence-title-page.jpg"
+                alt="Spiritual influence title page"
+                width={800}
+                height={1200}
+                className="h-auto w-full rounded-lg border border-slate-200 shadow-md"
+                priority
+              />
+            </div>
             {/* QURAN COMPILATION AND COLLATION.pdf */}
             <h1
               className=" font-bold md:mb-2
@@ -75,8 +92,8 @@ const SpritualInfulence = () => {
                         and the Wisdom, while earlier, they were in open
                         error.
                       </p>
-                      <p>Surah Al-Imran, Ch.3 verse 164, translation, Mufti Taqi Usmani.</p>
                     </div>
+                      <p>Surah Al-Imran, Ch.3 verse 164, translation, Mufti Taqi Usmani.</p>
                     Earlier in Chapter 2 (Surah Al-Baqra') Verse 129, Allah
                     Almighty mentions the supplication of Ibrahim and
                     Ismael as under; The Qur'an:
@@ -768,4 +785,3 @@ const SpritualInfulence = () => {
 };
 
 export default SpritualInfulence;
-

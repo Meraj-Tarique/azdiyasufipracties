@@ -1,14 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 // "use client";
+import { createMetadata } from "@/lib/seo";
 import styles from "@/styles/missionStyle.module.css";
 import { sections } from "./Content/content";
 import DownloadButton from "@/components/DownloadButton";
 import MainHeading from "@/components/Headings/MainHeading";
+import type { Metadata } from "next";
 
-// export const metadata = {
-//   title: "SEERAH",
-//   description: "This is about SEERAH.",
-// };
+export const metadata: Metadata = createMetadata({
+  title: "Fiqh and Islamic Jurisprudence",
+  description:
+    "An introduction to Fiqh as an integral part of comprehensive Islamic law, with references to Islamic jurisprudence and daily rulings.",
+  path: "/service/fiqh",
+  keywords: ["Fiqh", "Islamic jurisprudence", "Islamic law", "Usul al-Fiqh"],
+});
 
 // export const viewport = {
 //   width: "device-width",
